@@ -1,0 +1,30 @@
+<section class="mainbar">
+    <section class="matter" ng-style="{'background-image':'url(../images/photos/'+vm.player.imageBigPath+')'}">
+        <div class="container">
+            <div>
+   
+                <!--Need ng-hide for show/hide animations-->
+                <span ng-hide="vm.isUnchanged()" class="dissolve-animation ng-hide flag-haschanges">
+                    <i class="fa fa-asterisk fa fa-asterisk-large" rel="tooltip" title="You have changes"></i>
+                </span>
+            </div>
+            <div class="wblue">
+                
+                <div class="widget-content col-md-6 pull-right grayBG">
+                    
+                    <h2 class="bigName">{{vm.player.playerName}}</h2>
+                    <ul class="detail-bio flex-container">
+                     <li>{{vm.player.country}}</li>
+                     <li>{{vm.player.point}}</li>
+                     <li>{{vm.player.birth}}</li>
+                    </ul>
+                    <div class="description">
+                     <p>{{vm.player.description}}</p><br/>
+                     <p>{{vm.player.description2}}</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
