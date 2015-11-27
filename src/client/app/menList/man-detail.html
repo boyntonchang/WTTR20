@@ -11,11 +11,13 @@
             <div class="wblue">
                 
                 <div class="widget-content col-md-6 pull-right grayBG">
-                    
+                    <div class="goback">
+                     <a ng-click="vm.goBack()"><h3>BACK TO LIST</h3></a>
+                    </div>
                     <h2 class="bigName">{{vm.player.playerName}}</h2>
                     <ul class="detail-bio flex-container">
                      <li>{{vm.player.country}}</li>
-                     <li>{{vm.player.point}}</li>
+                     <li>RANK {{vm.player.Ranking}}</li>
                      <li>{{vm.player.birth}}</li>
                     </ul>
                     <div class="description">
@@ -23,8 +25,78 @@
                      <p>{{vm.player.description2}}</p>
                     </div>
                    
+                   <div class="videoArea">
+                     <a href="" data-toggle="modal" data-target="#myModal1"><img src="../images/pingpong.png"></img></a>
+                     <a href="" data-toggle="modal" data-target="#myModal2"><img src="../images/pingpong.png"></img></a>
+                     <a href="" data-toggle="modal" data-target="#myModal3"><img src="../images/pingpong.png"></img></a>
+                    </div>
+     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{vm.player.playerName}}</h4>
+      </div>
+      <div class="modal-body">
+      <iframe ng-src="{{vm.videoURL1}}" width="560" height="315"></iframe>
+<!--        <embed-video ng-href="{{vm.player.videoPath1}}"  width="100%" height="400" controls=1></embed-video>-->
+      </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+               <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{vm.player.playerName}}</h4>
+      </div>
+      <div class="modal-body">
+      <iframe ng-src="{{vm.videoURL2}}" width="560" height="315"></iframe>
+<!--        <embed-video ng-href="{{vm.player.videoPath2}}"  width="100%" height="480" controls=1><a href="{{vm.player.videoPath2}}">Watch</a></embed-video>-->
+      </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+               <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{vm.player.playerName}}</h4>
+      </div>
+      <div class="modal-body">
+      <iframe ng-src="{{vm.videoURL3}}" width="560" height="315"></iframe>
+<!--        <embed-video ng-href="{{vm.player.videoPath3}}"  width="100%" height="480" controls=1><a href="{{vm.player.videoPath3}}">Watch</a></embed-video>-->
+      </div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
                 </div>
             </div>
         </div>
     </section>
 </section>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.modal').on('hidden.bs.modal', function () {
+    var src = $(this).find('iframe').attr('src');
+    $(this).find('iframe').attr('src', '');
+    $(this).find('iframe').attr('src', src);
+});
+});
+</script>

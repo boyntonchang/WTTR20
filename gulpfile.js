@@ -41,8 +41,8 @@ gulp.task('vet', function() {
         .pipe($.if(args.verbose, $.print()))
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish', {verbose: true}))
-        .pipe($.jshint.reporter('fail'))
-        .pipe($.jscs());
+        .pipe($.jshint.reporter('fail'));
+        //.pipe($.jscs());
 });
 
 /**
@@ -209,7 +209,7 @@ gulp.task('build', ['optimize', 'images', 'fonts'], function() {
  * and inject them into the new index.html
  * @return {Stream}
  */
-gulp.task('optimize', ['inject', 'test'], function() {
+gulp.task('optimize', ['inject'], function() { //, 'test'
     log('Optimizing the js, css, and html');
 
     var assets = $.useref.assets({searchPath: './'});

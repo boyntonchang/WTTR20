@@ -833,10 +833,10 @@ form label {
 
 .mainbar {
  position: relative;
- margin-left: 190px;
+ margin-left: 176px;
  margin-right: 0;
  width: auto;
- background: #fff;
+// background: #fff;
  min-height: 900px;
 }
 
@@ -845,7 +845,10 @@ form label {
  padding: 0 !important;
  height: inherit;
 }
-
+section.matter .row{
+ margin-left: 0!important;
+ margin-right: 0!important;
+}
 
 /* Pagination*/
 
@@ -1305,7 +1308,7 @@ form label {
 }
 
 .thumbnailImage {
- max-width: 100px!important;
+ max-width: 80px!important;
  vertical-align: middle!important;
  border-radius: 50%;
 }
@@ -1567,14 +1570,56 @@ h2.bigName {
  border-right: none;
 }
 .description {
-    font-size: 1.2em;
+    font-size: 1.1em;
  min-height: 0px;
     max-height: 370px;
     overflow-y: auto;
  border-bottom: thin solid;
  padding: 15px;
 }
-* 
+
+.videoArea{
+ margin: auto;
+ text-align: center;
+ padding: 20px;
+ border-bottom: thin solid;
+ 
+   a{
+    margin-right: 10px;
+
+
+      img{
+       width:80px;
+       opacity: .7;
+      } 
+
+    }
+ a:hover{
+  img{
+   opacity: 1;
+  }
+ }
+  
+ }
+
+.goback {
+ padding-left: 10px;
+ h3{
+  color: #fff;
+  font-size: 1em;
+ }
+}
+.goback h3:before{
+ content: '\25c0';
+ margin-right: 5px;
+}
+.goback:hover{
+ 
+}
+
+.searchInput{
+ margin:5px 10px 0 0 ;
+}
 .stacked {
  float: none !important;
  display: block;
@@ -1605,7 +1650,7 @@ h2.bigName {
 .subTitle{
  font-size: 1em;
  padding-left: 15px;
- 
+ color: #fff;
 }
 /*#region Splash */
 
@@ -1743,9 +1788,10 @@ table td {
 }
 
 table th {
- font-weight: 500;
+ font-weight: 400;
  color: dodgerblue;
- font-size: .9em;
+ font-size: .7em;
+ text-transform: uppercase;
 }
 
 .table-hover tbody tr:hover > td,
@@ -1760,7 +1806,9 @@ table th {
 a {
  cursor: pointer;
 }
-
+.user .table-condensed td{
+ font-size: .7em!important;
+}
 
 /* #endregion */
 

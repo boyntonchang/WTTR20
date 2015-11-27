@@ -1,16 +1,16 @@
-(function() {
+(function () {
 
-    'use strict';
+ 'use strict';
 
-    angular.module('app', [
+
+ angular.module('app', [
         /* Shared modules */
         'app.core',
         'app.widgets',
 
         /* Feature areas */
         'app.menList',
-     'app.womenList',
-     
+        'app.womenList',
         'app.layout'
     ]);
 

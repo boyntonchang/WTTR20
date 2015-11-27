@@ -1,10 +1,10 @@
-(function() {
-    'use strict';
+(function () {
+ 'use strict';
 
-    angular.module('app.womenList', [
+ angular.module('app.womenList', [
         'app.core',
         'app.widgets'
-     
+
     ]);
 
 })();
