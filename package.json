@@ -13,12 +13,12 @@
   },
   "scripts": {
     "init": "npm install",
-    "install": "bower install && tsd install -r -o --save-dev",
+    "install": "bower install && tsd install -r -o --save",
     "start": "node src/server/app.js",
     "test": "gulp test"
   },
   "dependencies": {
-    "angular-youtube-embed": "^1.1.1",
+   
     "body-parser": "^1.8.2",
     "compression": "^1.1.0",
     "cors": "^2.2.0",
